@@ -16,7 +16,7 @@ mkCoqDerivation {
     { case = "8.8";  out = "1.1-coq8.8"; }
   ] null;
 
-  release."1.3.2-coq8.19".sha256 = "sha256:0g7ym74bh5jvlblbpdxs2176rcd2nfhykm2v1hajz7qzs0y1f68s";
+  release."1.3.2-coq8.19".sha256 = null;
   release."1.3.2-coq8.19".rev = "813c006f87ae817e1c954997d4422322a5a78203";
   release."1.3.2-coq8.15".sha256 = "sha256:0n0y9wda8bx88r17ls9541ibxw013ghp73zshgb65bi7ibznbhha";
   release."1.3.2-coq8.15".rev = "9a3e689036f12c09800ca3bac05054af0cc49233";
