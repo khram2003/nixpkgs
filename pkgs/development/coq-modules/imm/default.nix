@@ -1,5 +1,5 @@
 { lib, mkCoqDerivation, which, coq
-  , hahn, hahnExt, promising-lib
+  , hahn, hahnExt, promising-lib, coqhammer
   , version ? null }:
 
 with lib; mkCoqDerivation {
@@ -27,7 +27,7 @@ with lib; mkCoqDerivation {
   ## - arbitrary nix packages (you need to require them at the beginning of the file)
   ## - Coq packages (require them at the beginning of the file)
   ## - OCaml packages (use `coq.ocamlPackages.xxx`, no need to require them at the beginning of the file)
-  propagatedBuildInputs = [hahn hahnExt promising-lib];
+  propagatedBuildInputs = [hahn hahnExt promising-lib coqhammer];
 
   dontConfigure = true;
   extraInstallFlags = ["-f" "Makefile.coq"]; 
