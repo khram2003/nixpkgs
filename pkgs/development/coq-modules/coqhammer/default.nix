@@ -48,10 +48,10 @@ mkCoqDerivation {
   releaseRev = v: "refs/tags/v${v}";
 
   postPatch = ''
-    substituteInPlace Makefile.coq.local --replace \
+    substituteInPlace Makefile.coq.plugin.local --replace \
       '$(if $(COQBIN),$(COQBIN),`coqc -where | xargs dirname | xargs dirname`/bin/)' \
       '$(out)/bin/'
-    substituteInPlace Makefile.coq.local --replace 'g++' 'c++' --replace 'gcc' 'cc'
+    substituteInPlace Makefile.coq.plugin.local --replace 'g++' 'c++' --replace 'gcc' 'cc'
   '';
 
   preInstall = ''
