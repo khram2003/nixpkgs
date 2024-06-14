@@ -53,6 +53,9 @@ mkCoqDerivation {
       '$(if $(COQBIN),$(COQBIN),`coqc -where | xargs dirname | xargs dirname`/bin/)' \
       '$(out)/bin/'
     substituteInPlace Makefile.coq.plugin.local --replace 'g++' 'c++' --replace 'gcc' 'cc'
+    substituteInPlace Makefile --replace \
+      '$(if $(COQBIN),$(COQBIN),`coqc -where | xargs dirname | xargs dirname`/bin/)' \
+      '$(out)/bin/'
   '';
 
   preInstall = ''
